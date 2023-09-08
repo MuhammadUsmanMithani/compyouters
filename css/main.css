@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "NK57 Monospace";
+    src: url("../fonts/nk57-monospace-no-bk.otf");
+}
+:root {
+    --url-color: #c44b7d;
+    --dark-banner-color: #212529;
+    --dark-text-color: #e1e1e1;
+    --banner-motto-highlight: #e02323;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.banner {
+    position: absolute;
+    margin:0;
+    padding: 0;
+    background-color: var(--dark-banner-color);
+    color: var(--dark-text-color);
+    background-image: url("imgs/main/banner_doodle.png");
+    background-size: contain 50vh;
+    background-repeat: repeat-y;
+}
+.banner > .text {
+    text-align: center;
+    margin: 7% 0 7% 0;
+}
+.text > .motto {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 50px;
+    font-family: "NK57 Monospace", 'Courier New', Courier, monospace;
+}
+.text > .motto > span {
+    color: var(--banner-motto-highlight);
+}
+.text > p {
+    font-size: 17px;
+}
+.text > p.description {
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 25px;
+    padding: 0 calc(50% - 300px) 0 calc(50% - 300px);
+    margin-bottom: 10px;
+    font-style: oblique;
+}
+.text > p a {
+    color: var(--dark-text-color);
+    text-decoration: underline var(--url-color) 2px;
+    font-weight: 500;
+    text-underline-offset: 5px;
+}
