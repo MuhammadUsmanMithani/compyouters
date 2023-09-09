@@ -1,0 +1,15 @@
+// make a theme switcher and save the theme to local storage
+let themeSwitcher = document.getElementsByClassName("theme-switcher")[0];
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark");
+    themeSwitcher.checked = true;
+}
+themeSwitcher.addEventListener("click", () => {
+    if (document.body.classList.contains("dark")) {
+        document.body.classList.remove("dark");
+        localStorage.setItem("theme", "light");
+    } else {
+        document.body.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+    }
+});

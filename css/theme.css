@@ -1,0 +1,80 @@
+:root {
+    --pink: #c44b7d;
+    --dark-banner-color: #212529;
+    --dark-bg-color: #303136;
+    --dark-text-color: #e1e1e1;
+    --dark-pink: #c93874;
+
+    --light-banner-color: #e6e6e6;
+    --light-bg-color: #f5f5f4;
+    --light-text-color: #212529;
+}
+/* The switch - the box around the slider */
+.switch {
+    display: block;
+    --width-of-switch: 3.5em;
+    --height-of-switch: 2em;
+    /* size of sliding icon -- sun and moon */
+    --size-of-icon: 1.4em;
+    /* it is like a inline-padding of switch */
+    --slider-offset: 0.3em;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transform: scale(0.8);
+}
+/* Hide default HTML checkbox */
+.switch input.theme-switcher {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f4f4f5;
+    transition: .4s;
+    border-radius: 30px;
+    transition: 0.4s;
+    box-shadow: 0 0 0.2rem var(--light-text-color);
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: var(--size-of-icon, 1.4em);
+    width: var(--size-of-icon, 1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset, 0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(40deg, var(--dark-pink), var(--pink) 70%);
+    transition: 0.4s;
+}
+input.theme-switcher:checked+.slider {
+    background-color: #303136;
+    box-shadow: 0 0 0.3rem var(--dark-text-color);
+}
+input.theme-switcher:checked+.slider:before {
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+    background: #303136;
+    /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+}
+
+body {
+    background-color: var(--light-bg-color);
+    color: var(--light-text-color);
+    transition: all 0.5s ease-in-out;
+}
+.dark {
+    color: var(--dark-text-color);
+    background-color: var(--dark-bg-color);
+}

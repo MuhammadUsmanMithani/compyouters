@@ -22,9 +22,9 @@ let load = async () => {
         await sleep(randomInt(250,300));
         motto.innerHTML += array[i];
     }
-    motto.innerHTML = "A Computer for <span class='colored white'>You</span>...";
+    motto.innerHTML = "A Computer for <span class='colored static'>You</span>...";
     sleep(50).then(() => {
-        document.getElementsByClassName("colored")[0].classList.remove("white");
+        document.getElementsByClassName("colored")[0].classList.remove("static");
     });
 }
 load()

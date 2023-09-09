@@ -5,8 +5,13 @@
 :root {
     --pink: #c44b7d;
     --dark-banner-color: #212529;
+    --dark-bg-color: #303136;
     --dark-text-color: #e1e1e1;
     --dark-pink: #c93874;
+
+    --light-banner-color: #e6e6e6;
+    --light-bg-color: #f5f5f4;
+    --light-text-color: #212529;
 }
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -14,18 +19,24 @@ body {
     padding: 0;
 }
 .banner {
-    position: absolute;
+    position: relative;
     margin:0;
     padding: 0;
+    background-color: var(--light-banner-color);
+    color: var(--light-text-color);
+    background-image: url("imgs/main/banner_doodle.png");
+    background-size: contain;
+    background-repeat: repeat-y;
+    padding: 7% 0 7% 0;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 0.5em 0 var(--dark-banner-color);
+}
+.dark > .banner {
     background-color: var(--dark-banner-color);
     color: var(--dark-text-color);
-    background-image: url("imgs/main/banner_doodle.png");
-    background-size: contain 50vh;
-    background-repeat: repeat-y;
 }
 .banner > .text {
     text-align: center;
-    margin: 7% 0 7% 0;
 }
 .text > .motto {
     font-size: 45px;
@@ -40,33 +51,24 @@ body {
     font-weight: 500;
 }
 @keyframes text-highlight {
-    0% {
-        opacity: 0;
-    }
-    24% {
-        opacity: 0;
-    }
-    26% {
-        opacity: 1;
-    }
-    74% {
-        opacity: 1;
-    }
-    76% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 0;
-    }
+    0% {opacity: 0}
+    24% {opacity: 0}
+    26% {opacity: 1}
+    74% {opacity: 1}
+    76% {opacity: 0}
+    100% {opacity: 0}
 }
 .text > .motto span.colored {
     color: var(--pink);
     transition: all 0.5s ease-in-out;
     font-weight: 1500;
 }
-.text > .motto span.colored.white {
-    color: var(--dark-text-color);
+.text > .motto span.colored.static {
+    color: var(--light-text-color);
     font-weight: 800;
+}
+.dark .text > .motto span.colored.static {
+    color: var(--dark-text-color);
 }
 .text > p {
     font-size: 17px;
@@ -80,7 +82,7 @@ body {
     font-style: oblique;
 }
 .text > p a {
-    color: var(--dark-text-color);
+    color: var(--light-text-color);
     text-decoration: underline var(--pink) 2px;
     font-weight: 500;
     text-underline-offset: 5px;
@@ -88,7 +90,10 @@ body {
     position: relative;
     top: 0;
 }
-
+.dark .text > p a {
+    color: var(--dark-text-color);
+    text-decoration: underline var(--pink) 2px;
+}
 .text > p a:hover {
     text-decoration: underline var(--dark-pink) 3px;
     text-underline-offset: 8px;

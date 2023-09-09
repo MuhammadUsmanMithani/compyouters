@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/banner.css">
+    <link rel="stylesheet" href="css/md.css">
+    <link rel="stylesheet" href="css/theme.css">
     <title>Intro | A Computer for You</title>
 </head>
 <body>
@@ -14,7 +16,10 @@
             </div>
             <div class="theme">
                 <span class="theme-icon">
-
+                    <label class="switch">
+                        <input class="theme-switcher" type="checkbox">
+                        <span class="slider"></span>
+                    </label>
                 </span>
                 <!-- theme switcher comes here -->
             </div>
@@ -36,7 +41,11 @@
             </p>
         </div>
     </div>
+    <md-block src="https://raw.githubusercontent.com/MuhammadUsmanMithani/MuhammadUsmanMithani/main/README.md" hmin="2">
+
+    </md-block>
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
     <script src="js/banner.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>
