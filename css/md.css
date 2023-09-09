@@ -1,6 +1,33 @@
+:root {
+    --pink: #c44b7d;
+    --dark-banner-color: #212529;
+    --dark-bg-color: #303136;
+    --dark-text-color: #e1e1e1;
+    --dark-pink: #c93874;
+
+    --light-banner-color: #e6e6e6;
+    --light-bg-color: #f5f5f4;
+    --light-text-color: #181b1d;
+}
+
 md-block {
     padding: 50px calc(50% - 400px) 50px calc(50% - 400px) !important;
     display: block;
+}
+md-block a {
+    color: var(--light-text-color);
+    text-decoration: underline var(--pink) 2px;
+    font-weight: 500;
+    text-underline-offset: 5px;
+    transition: all 0.25s ease-in-out;
+    position: relative;
+    top: 0;
+}
+md-block a:hover {
+    top: -2px;
+}
+.dark md-block a {
+    color: var(--dark-text-color);
 }
 
 @media screen and (max-width: 800px) {
