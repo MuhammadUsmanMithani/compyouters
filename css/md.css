@@ -1,37 +1,66 @@
 :root {
     --pink: #c44b7d;
+    --dark-pink: #c93874;
+
     --dark-banner-color: #212529;
     --dark-bg-color: #303136;
     --dark-text-color: #e1e1e1;
-    --dark-pink: #c93874;
+    --dark-code-color: #27272b;
 
     --light-banner-color: #e6e6e6;
     --light-bg-color: #f5f5f4;
     --light-text-color: #181b1d;
+    --light-code-color: #e0e0e0;
 }
 
-md-block {
+.md-loader {
     padding: 50px calc(50% - 400px) 50px calc(50% - 400px) !important;
     display: block;
 }
-md-block a {
+.md-loader a {
     color: var(--light-text-color);
     text-decoration: underline var(--pink) 2px;
-    font-weight: 500;
-    text-underline-offset: 5px;
-    transition: all 0.25s ease-in-out;
+    font-weight: 400;
+    text-underline-offset: 3px;
+    transition: all 0.25s ease-in-out, color 0.5s ease-in-out;
     position: relative;
     top: 0;
 }
-md-block a:hover {
+.md-loader a:hover {
     top: -2px;
 }
-.dark md-block a {
+.dark .md-loader a {
     color: var(--dark-text-color);
 }
-
-@media screen and (max-width: 800px) {
-    md-block{
+.md-loader img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 0.2rem var(--light-text-color);
+}
+.dark .md-loader img {
+    box-shadow: 0 0 0.2rem var(--dark-text-color);
+}
+.md-loader pre > code {
+    display: block;
+    text-wrap: wrap;
+    margin: 0;
+    border-radius: 5px;
+    background-color: var(--dark-code-color);
+    box-shadow: 0 0 0.2rem var(--light-text-color);
+}
+.dark .md-loader pre > code {
+    box-shadow: 0 0 0.2rem var(--dark-text-color);
+}
+.md-loader > md-block > pre {
+    display: block;
+    width: calc(100% - 20px);
+    text-wrap: wrap;
+    overflow-wrap: break-word;
+    margin: 10px;
+}
+@media screen and (max-width: 850px) {
+    .md-loader{
         padding: 50px 20px 50px 20px !important;
     }    
 }

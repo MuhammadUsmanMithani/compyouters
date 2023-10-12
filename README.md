@@ -6,6 +6,8 @@ This is an indevelopment website made for teaching people about the interesting 
 ## Running the website
 This build may partially work loading it as a static HTML file as the markdown support for it is pretty broken and thus it does not load the markdown anyways due to CORS issues. That is why it is highly preferable that you launch the site on a web server (either by making an express.js/flask or any other backend for a server where you host all the files or preferably using the other method shown).
 
+**NOTE: The following builds will completely break without using a web server to host the website even on your local device for debugging.**
+
 Steps to launch the files on a web server
 - Clone the repository using `git clone` in cmd to any preferable folder.
 - Open the repository in Visual Studio Code.

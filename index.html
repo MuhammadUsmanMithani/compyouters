@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="css/banner.css">
     <link rel="stylesheet" href="css/md.css">
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Intro | A Computer for You</title>
 </head>
 <body>
@@ -41,11 +44,31 @@
             </p>
         </div>
     </div>
-    <md-block src="https://raw.githubusercontent.com/MuhammadUsmanMithani/MuhammadUsmanMithani/main/README.md" hmin="2">
+    <div class="md-loader">
+        <md-block class="md">
 
-    </md-block>
-    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
-    <script src="js/banner.js"></script>
+        </md-block>
+    </div>
+
+    <footer class="hide">
+        <div class="footer">
+            <div class="footer-text">
+                <p>
+                    <span class="footer-text-span">Made with ❤️ by</span>
+                    <span class="footer-text-span"><a href="https://iammithani.is-a.dev/">Muhammad Usman Mithani</a></span>
+                </p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/iammithani"><i class="fa-brands fa-github fa-xl"></i></a>
+            </div>
+    </footer>
+
     <script src="js/theme.js"></script>
+    <script src="js/banner.js"></script>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/go.min.js"></script>
+    <script src="js/md-loader.js"></script>
 </body>
 </html>
