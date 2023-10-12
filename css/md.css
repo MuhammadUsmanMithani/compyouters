@@ -59,6 +59,9 @@
     overflow-wrap: break-word;
     margin: 10px;
 }
+.hljs-punctuation {
+    color: var(--dark-text-color) !important;
+}
 @media screen and (max-width: 850px) {
     .md-loader{
         padding: 50px 20px 50px 20px !important;
