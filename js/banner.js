@@ -1,30 +1,36 @@
-let randomInt = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1) + min);
-}
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-let string = "A Computer for You...";
-let array = string.split("");
-let motto = document.getElementsByClassName("caption")[0];
-let audio = document.getElementsByClassName("audio")
-Array.from(audio).forEach((element) => {
+// Reusable functions
+const randomInt = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
+// Declaring variables
+const string = "A Computer for You...";
+const array = string.split("");
+const motto = document.querySelector(".caption");
+const audio = document.querySelectorAll(".audio");
+
+// Setting volume for audio
+audio.forEach(element => {
     element.volume = 0.3;
 });
-let load = async () => {
-    for (let i=0;i<array.length;i++) {
-        let audioIndex = randomInt(0,3);
+
+// Iterating over the banner text
+const load = async () => {
+    let mottoText = '';
+    for (let i = 0; i < array.length; i++) {
+        const audioIndex = randomInt(0, 3);
         if (audio[audioIndex].paused) {
             audio[audioIndex].play().catch(() => {
                 console.info("Audio not played due to no user interaction with DOM!")
             });
         }
-        await sleep(randomInt(250,300));
-        motto.innerHTML += array[i];
+        await sleep(randomInt(250, 300));
+        mottoText += array[i];
+        motto.textContent = mottoText;
     }
     motto.innerHTML = "A Computer for <span class='colored static'>You</span>...";
-    sleep(50).then(() => {
-        document.getElementsByClassName("colored")[0].classList.remove("static");
-    });
+    await sleep(50);
+    document.querySelector(".colored").classList.remove("static");
 }
-load()
+
+// Calling the entire script
+load();
