@@ -1,13 +1,16 @@
 :root {
     --pink: #c44b7d;
+    --dark-pink: #c93874;
+
     --dark-banner-color: #212529;
     --dark-bg-color: #303136;
     --dark-text-color: #e1e1e1;
-    --dark-pink: #c93874;
+    --dark-code-color: #27272b;
 
     --light-banner-color: #e6e6e6;
     --light-bg-color: #f5f5f4;
     --light-text-color: #181b1d;
+    --light-code-color: #e0e0e0;
 }
 /* The switch - the box around the slider */
 .switch {
@@ -77,4 +80,43 @@ body {
 .dark {
     color: var(--dark-text-color);
     background-color: var(--dark-bg-color);
+}
+footer {
+    font-family: "Segoe UI Symbol";
+    background-color: var(--light-banner-color);
+    color: var(--light-text-color);
+    font-size: 15px;
+    position: relative;
+    bottom: 0;
+    transition: all 0.5s ease-in-out;
+    text-align: center;
+    padding: 10px 0 30px 0;
+    line-height: 30px;
+    opacity: 1;
+    box-shadow: 0 0 0.2em var(--light-text-color);
+}
+.dark footer {
+    background-color: var(--dark-banner-color);
+    color: var(--dark-text-color);
+    box-shadow: 0 0 0.2em var(--dark-text-color);
+}
+footer.hide {
+    opacity: 0;
+    bottom: -100px;
+}
+footer a {
+    color: var(--light-text-color);
+    text-decoration: underline var(--pink) 2px;
+    font-weight: 600;
+    text-underline-offset: 5px;
+    transition: all 0.25s ease-in-out, color 0.5s ease-in-out;
+    position: relative;
+    top: 0;
+    font-size: 18px;
+}
+.dark footer a {
+    color: var(--dark-text-color);
+}
+footer a:hover {
+    top: -3px;
 }
