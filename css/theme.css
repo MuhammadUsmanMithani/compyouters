@@ -1,13 +1,23 @@
+@font-face {
+    font-family: "NK57 Monospace";
+    src: url("../fonts/nk57-monospace-no-bk.otf");
+}
+@font-face {
+    font-family: "NK57 Monospace SC";
+    src: url("../fonts/nk57-monospace-sc-bd.otf");
+}
 :root {
     --pink: #c44b7d;
     --dark-pink: #c93874;
 
-    --dark-banner-color: #212529;
-    --dark-bg-color: #303136;
+    --dark-banner-color: #0e131a;
+    --dark-banner-color-rgb: 14, 19, 26;
+    --dark-bg-color: #3a3b3d;
     --dark-text-color: #e1e1e1;
     --dark-code-color: #27272b;
 
-    --light-banner-color: #e6e6e6;
+    --light-banner-color: #d1dde9;
+    --light-banner-color-rgb: 209, 221, 233;
     --light-bg-color: #f5f5f4;
     --light-text-color: #181b1d;
     --light-code-color: #e0e0e0;
@@ -71,7 +81,6 @@ input.theme-switcher:checked+.slider:before {
     /* change the value of second inset in box-shadow to change the angle and direction of the moon  */
     box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
 }
-
 body {
     background-color: var(--light-bg-color);
     color: var(--light-text-color);
@@ -81,8 +90,9 @@ body {
     color: var(--dark-text-color);
     background-color: var(--dark-bg-color);
 }
+
 footer {
-    font-family: "Segoe UI Symbol";
+    font-family: "Roboto", "Segoe UI Symbol";
     background-color: var(--light-banner-color);
     color: var(--light-text-color);
     font-size: 15px;
@@ -114,9 +124,25 @@ footer a {
     top: 0;
     font-size: 18px;
 }
+footer .footer-text {
+    padding: 0 10px 0 10px;
+}
+footer .footer-links {
+    margin-top: 20px;
+}
+footer .footer-links a {
+    margin: 0 10px;
+    font-size: 20px;
+}
 .dark footer a {
     color: var(--dark-text-color);
 }
 footer a:hover {
     top: -3px;
+}
+
+@media screen and (max-width: 768px) {
+   .switch {
+        transform: scale(0.7);
+   }
 }

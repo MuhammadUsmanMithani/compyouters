@@ -1,26 +1,13 @@
-:root {
-    --pink: #c44b7d;
-    --dark-pink: #c93874;
-
-    --dark-banner-color: #212529;
-    --dark-bg-color: #303136;
-    --dark-text-color: #e1e1e1;
-    --dark-code-color: #27272b;
-
-    --light-banner-color: #e6e6e6;
-    --light-bg-color: #f5f5f4;
-    --light-text-color: #181b1d;
-    --light-code-color: #e0e0e0;
-}
-
 .md-loader {
     padding: 50px calc(50% - 400px) 50px calc(50% - 400px) !important;
     display: block;
+    font-family: "Roboto";
+    line-height: 1.7;
+    font-size: 1.1rem;
 }
 .md-loader a {
     color: var(--light-text-color);
     text-decoration: underline var(--pink) 2px;
-    font-weight: 400;
     text-underline-offset: 3px;
     transition: all 0.25s ease-in-out, color 0.5s ease-in-out;
     position: relative;
@@ -32,11 +19,26 @@
 .dark .md-loader a {
     color: var(--dark-text-color);
 }
+.md-loader strong {
+    font-weight: 600 !important;
+}
 .md-loader img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 0 0.2rem var(--light-text-color);
+}
+.md-loader :not(pre) > code {
+    padding: 3px;
+    background-color: var(--light-banner-color);
+    border-radius: 3px;
+    transition: all 0.5s ease-in-out;
+    color: var(--light-text-color);
+    font-size: 0.95rem;
+}
+.dark .md-loader :not(pre) > code {
+    background-color: var(--dark-banner-color);
+    color: var(--dark-text-color);
 }
 .dark .md-loader img {
     box-shadow: 0 0 0.2rem var(--dark-text-color);
@@ -48,6 +50,7 @@
     border-radius: 5px;
     background-color: var(--dark-code-color);
     box-shadow: 0 0 0.2rem var(--light-text-color);
+    font-size: 0.9rem;
 }
 .dark .md-loader pre > code {
     box-shadow: 0 0 0.2rem var(--dark-text-color);
@@ -62,8 +65,15 @@
 .hljs-punctuation {
     color: var(--dark-text-color) !important;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "NK57 Monospace SC";
+    font-weight: 1000;
+}
+
 @media screen and (max-width: 850px) {
     .md-loader{
         padding: 50px 20px 50px 20px !important;
-    }    
+        font-size: 1rem;
+    }
 }

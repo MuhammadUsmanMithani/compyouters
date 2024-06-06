@@ -1,21 +1,3 @@
-@font-face {
-    font-family: "NK57 Monospace";
-    src: url("../fonts/nk57-monospace-no-bk.otf");
-}
-:root {
-    --pink: #c44b7d;
-    --dark-pink: #c93874;
-
-    --dark-banner-color: #212529;
-    --dark-bg-color: #303136;
-    --dark-text-color: #e1e1e1;
-    --dark-code-color: #27272b;
-
-    --light-banner-color: #e6e6e6;
-    --light-bg-color: #f5f5f4;
-    --light-text-color: #181b1d;
-    --light-code-color: #e0e0e0;
-}
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -23,19 +5,27 @@ body {
 }
 .banner {
     position: relative;
-    margin:0;
+    margin: 0;
     padding: 0;
-    background-color: var(--light-banner-color);
     color: var(--light-text-color);
-    background-image: url("imgs/main/banner_doodle.png");
-    background-size: contain;
-    background-repeat: repeat-y;
     padding: 7% 0 7% 0;
     transition: all 0.5s ease-in-out;
     box-shadow: 0 0 0.2em 0 var(--dark-banner-color);
+    background-color: rgba(var(--light-banner-color-rgb), 0.87);
+}
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: url("../assets/images/static/banner_background_doodles.svg");
+    background-size: contain;
 }
 .dark > .banner {
-    background-color: var(--dark-banner-color);
+    background-color: rgba(var(--dark-banner-color-rgb), 0.8);
     color: var(--dark-text-color);
     box-shadow: 0 0 0.2em 0 var(--light-banner-color);
 }
@@ -47,6 +37,7 @@ body {
     font-weight: 800;
     margin-bottom: 50px;
     font-family: "NK57 Monospace", 'Courier New', Courier, monospace;
+    padding: 0 10px 0 10px;
 }
 .text > .motto > .highlight {
     color: var(--dark-pink);
@@ -65,7 +56,7 @@ body {
 .text > .motto span.colored {
     color: var(--pink);
     transition: all 0.5s ease-in-out;
-    font-weight: 1500;
+    font-weight: 1000;
 }
 .text > .motto span.colored.static {
     color: var(--light-text-color);
@@ -76,14 +67,14 @@ body {
 }
 .text > p {
     font-size: 17px;
+    font-family: 'Roboto';
 }
 .text > p.description {
     font-size: 16px;
-    font-weight: 100;
+    font-weight: 500;
     line-height: 25px;
     padding: 0 calc(50% - 300px) 0 calc(50% - 300px);
     margin-bottom: 10px;
-    font-style: oblique;
 }
 .text > p a {
     color: var(--light-text-color);
@@ -103,7 +94,6 @@ body {
     text-underline-offset: 8px;
     top: -3px;
 }
-
 @media screen and (min-width:351px) and (max-width: 650px) {
     .text {
         padding: 30px 20px 25px 20px;

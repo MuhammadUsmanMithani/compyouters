@@ -12,7 +12,7 @@ fetch(url).then(response => response.json()).then(data => {
     setTimeout(() => {
         let footer = document.getElementsByTagName("footer")[0];
         footer.classList.remove("hide")
-    }, 200);
+    }, 1000);
     setTimeout(() => {
         let tags = document.getElementsByTagName("pre");
         for (let i=0;i<tags.length;i++) {
