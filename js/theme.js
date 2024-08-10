@@ -1,8 +1,9 @@
-const theme = localStorage.getItem("theme");
+let theme = localStorage.getItem("theme");
 const prefersDarkScheme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 if (!theme && prefersDarkScheme) {
     localStorage.setItem("theme", "dark");
-    console.log("System default dark theme is enabled by default! Enabling dark mode...");
+    console.log("System default dark theme is enabled! Enabling dark mode...");
+    theme = localStorage.getItem("theme");
 }
 const themeSwitcher = document.getElementsByClassName("theme-switcher")[0];
 if (theme === "dark") {
