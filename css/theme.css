@@ -21,17 +21,23 @@
     --light-bg-color: #f5f5f4;
     --light-text-color: #181b1d;
     --light-code-color: #e0e0e0;
+
+    --tip-bg: #00d55240;
+    --tip-border: #4ed281;
+    --dyk-bg: #ff9f0040;
+    --dyk-border: #ff9f00;
+    --note-bg: #4d9aff40;
+    --note-border: #4d9aff;
 }
 /* The switch - the box around the slider */
 .switch {
-    display: block;
+    display: inline-block;
     --width-of-switch: 3.5em;
     --height-of-switch: 2em;
     /* size of sliding icon -- sun and moon */
     --size-of-icon: 1.4em;
     /* it is like a inline-padding of switch */
     --slider-offset: 0.3em;
-    position: relative;
     width: var(--width-of-switch);
     height: var(--height-of-switch);
     position: absolute;
@@ -84,7 +90,7 @@ input.theme-switcher:checked+.slider:before {
 body {
     background-color: var(--light-bg-color);
     color: var(--light-text-color);
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 .dark {
     color: var(--dark-text-color);
@@ -98,12 +104,14 @@ footer {
     font-size: 15px;
     position: relative;
     bottom: 0;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
     text-align: center;
     padding: 10px 0 30px 0;
     line-height: 30px;
     opacity: 1;
     box-shadow: 0 0 0.2em var(--light-text-color);
+    width: 100%;
+    height: fit-content;
 }
 .dark footer {
     background-color: var(--dark-banner-color);
@@ -111,7 +119,7 @@ footer {
     box-shadow: 0 0 0.2em var(--dark-text-color);
 }
 footer.hide {
-    opacity: 0;
+    opacity: 1;
     bottom: -100px;
 }
 footer a {
@@ -119,7 +127,7 @@ footer a {
     text-decoration: underline var(--pink) 2px;
     font-weight: 600;
     text-underline-offset: 5px;
-    transition: all 0.25s ease-in-out, color 0.5s ease-in-out;
+    transition: all 0.25s ease-in-out, color 0.2s ease-in-out;
     position: relative;
     top: 0;
     font-size: 18px;

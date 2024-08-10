@@ -32,5 +32,10 @@ const load = async () => {
     document.querySelector(".colored").classList.remove("static");
 }
 
+setTimeout(() => {
+    let footer = document.getElementsByTagName("footer")[0];
+    footer.classList.remove("hide")
+}, 1000);
+
 // Calling the entire script
 load();

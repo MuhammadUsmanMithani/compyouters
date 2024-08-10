@@ -1,9 +1,12 @@
 .md-loader {
-    padding: 50px calc(50% - 400px) 50px calc(50% - 400px) !important;
+    /* padding: 10px calc(50% - 400px) 50px calc(50% - 400px) !important; */
     display: block;
     font-family: "Roboto";
     line-height: 1.7;
     font-size: 1.1rem;
+    width: 80%;
+    transition: opacity 0.5s ease-in-out;
+    margin: 0 auto;
 }
 .md-loader a {
     color: var(--light-text-color);
@@ -12,6 +15,7 @@
     transition: all 0.25s ease-in-out, color 0.5s ease-in-out;
     position: relative;
     top: 0;
+    font-weight: 600;
 }
 .md-loader a:hover {
     top: -2px;
@@ -69,11 +73,17 @@
 h1, h2, h3, h4, h5, h6 {
     font-family: "NK57 Monospace SC";
     font-weight: 1000;
+    border-bottom: 1.5px solid var(--light-text-color);
+    padding-bottom: 5px;
 }
 
 @media screen and (max-width: 850px) {
     .md-loader{
-        padding: 50px 20px 50px 20px !important;
-        font-size: 1rem;
+        font-size: 1.2rem;
+    }
+}
+@media screen and (min-width: 2500px) {
+    .md-loader{
+        font-size: 1.5rem;
     }
 }
