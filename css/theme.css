@@ -128,6 +128,7 @@ footer.hide {
 }
 footer a {
     color: var(--light-text-color);
+    -webkit-text-decoration: underline var(--pink) 2px;
     text-decoration: underline var(--pink) 2px;
     text-decoration-thickness: 2px;
     font-weight: 600;

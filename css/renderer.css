@@ -167,24 +167,28 @@ body, html {
 
 #index-list li:hover {
     background-color: var(--light-code-color);
+    -webkit-text-decoration: 2px solid underline var(--pink);
     text-decoration: 2px solid underline var(--pink);
     text-decoration-thickness: 2px;
 }
 
 .dark #index-list li:hover {
     background-color: var(--dark-code-color);
+    -webkit-text-decoration: 2px solid underline var(--dark-pink);
     text-decoration: 2px solid underline var(--dark-pink);
     text-decoration-thickness: 2px;
 }
 
 #index-list li.active {
     background-color: var(--light-bg-color);
+    -webkit-text-decoration: 1px solid underline var(--dark-pink);
     text-decoration: 1px solid underline var(--dark-pink);
     text-decoration-thickness: 1px;
 }
 
 .dark #index-list li.active {
     background-color: var(--dark-bg-color);
+    -webkit-text-decoration: 1px solid underline var(--pink);
     text-decoration: 1px solid underline var(--pink);
     text-decoration-thickness: 1px;
 }

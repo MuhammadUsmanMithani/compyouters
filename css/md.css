@@ -10,6 +10,7 @@
 }
 .md-loader a {
     color: var(--light-text-color);
+    -webkit-text-decoration: underline var(--pink) 2px;
     text-decoration: underline var(--pink) 2px;
     text-decoration-thickness: 2px;
     text-underline-offset: 3px;
@@ -46,6 +47,7 @@ p:has(>img) > img {
 }
 p:has(>img) a {
     color: gray !important;
+    -webkit-text-decoration: underline solid gray 1px !important;
     text-decoration: underline solid gray 1px !important;
     text-decoration-thickness: 1px !important;
     font-weight: 500;
