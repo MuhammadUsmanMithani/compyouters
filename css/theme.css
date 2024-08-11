@@ -29,6 +29,9 @@
     --note-bg: #4d9aff40;
     --note-border: #4d9aff;
 }
+* {
+    -webkit-tap-highlight-color: var(--dyk-bg);
+}
 /* The switch - the box around the slider */
 .switch {
     display: inline-block;
@@ -111,6 +114,7 @@ footer {
     opacity: 1;
     box-shadow: 0 0 0.2em var(--light-text-color);
     width: 100%;
+    height: -moz-fit-content;
     height: fit-content;
 }
 .dark footer {
@@ -125,6 +129,7 @@ footer.hide {
 footer a {
     color: var(--light-text-color);
     text-decoration: underline var(--pink) 2px;
+    text-decoration-thickness: 2px;
     font-weight: 600;
     text-underline-offset: 5px;
     transition: all 0.25s ease-in-out, color 0.2s ease-in-out;

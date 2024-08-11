@@ -79,6 +79,7 @@ body {
 .text > p a {
     color: var(--light-text-color);
     text-decoration: underline var(--pink) 2px;
+    text-decoration-thickness: 2px;
     font-weight: 500;
     text-underline-offset: 5px;
     transition: all 0.25s ease-in-out, color 0.5s ease-in-out;
@@ -88,14 +89,17 @@ body {
 .dark .text > p a {
     color: var(--dark-text-color);
     text-decoration: underline var(--pink) 2px;
+    text-decoration-thickness: 2px;
 }
 .text > p a:hover {
     text-decoration: underline var(--dark-pink) 3px;
+    text-decoration-thickness: 3px;
     text-underline-offset: 8px;
     top: -3px;
 }
 a:has(>.open-viewer-btn) {
     text-decoration: none !important;
+    display: contents;
 }
 a:has(>.open-viewer-btn):hover {
     text-decoration: none !important;
