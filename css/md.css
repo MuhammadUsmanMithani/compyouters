@@ -10,9 +10,10 @@
 }
 .md-loader a {
     color: var(--light-text-color);
-    -webkit-text-decoration: underline var(--pink) 2px;
-    text-decoration: underline var(--pink) 2px;
+    text-decoration: underline var(--pink);
+    -webkit-text-decoration: underline var(--pink);
     text-decoration-thickness: 2px;
+    -webkit-text-decoration-thickness: 2px;
     text-underline-offset: 3px;
     transition: all 0.25s ease-in-out, color 0.5s ease-in-out;
     position: relative;
@@ -47,9 +48,10 @@ p:has(>img) > img {
 }
 p:has(>img) a {
     color: gray !important;
-    -webkit-text-decoration: underline solid gray 1px !important;
-    text-decoration: underline solid gray 1px !important;
+    text-decoration: underline gray !important;
+    -webkit-text-decoration: underline gray !important;
     text-decoration-thickness: 1px !important;
+    -webkit-text-decoration-thickness: 1px !important;
     font-weight: 500;
 }
 p:has(>img) a {
