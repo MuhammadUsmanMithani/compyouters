@@ -1,8 +1,10 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    
+    const ghRoot = "https://github.com/MuhammadUsmanMithani/compyouters";
     const indexList = document.getElementById("index-list");
     const contentContainer = document.getElementsByClassName("md-loader")[0];
+    const chapterNumber = document.getElementById("chapter-number");
     const chapterTitle = document.getElementById("chapter-title");
+    const ghLink = document.getElementById("gh-link").getElementsByTagName("a")[0];
     const prevButton = document.getElementById("prev-chapter");
     const nextButton = document.getElementById("next-chapter");
     const loadingOverlay = document.getElementById("loading-overlay");
@@ -48,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     function generateIndex() {
         chapters.forEach((chapter, index) => {
             const chapterElement = document.createElement("li");
-            chapterElement.textContent = chapter;
+            chapterElement.textContent = `${index+1}. ${chapter}`;
             chapterElement.addEventListener("click", () => loadChapter(index));
             indexList.appendChild(chapterElement);
         });
@@ -56,7 +58,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     async function loadChapter(index) {
         const chapter = chapters[index];
-        const markdownPath = `${window.location.origin}/chapters/${chapter.toLowerCase().replace(/[^a-z0-9 ]+/g, '').replace(/ /g, '_')}.md`; // Loading the markdown file with the same name as the chapter
+        const file = `chapters/${chapter.toLowerCase().replace(/[^a-z0-9 ]+/g, '').replace(/ /g, '_')}.md`
+        const markdownPath = `${window.location.origin}/${file}`; // Loading the markdown file with the same name as the chapter
         if (markdownPath == contentContainer.src) {
             return;
         }
@@ -66,9 +69,11 @@ document.addEventListener("DOMContentLoaded", async function () {
         footer.classList.remove('faded-in');
         await wait(300);
         chapterTitle.textContent = chapter;
+        chapterNumber.textContent = `Chapter ${index + 1}`;
         document.title = `Chapter ${index + 1} - ${chapter}`;
         contentContainer.innerText = `${chapter} was not found! Please reload the page.`;
         contentContainer.src = markdownPath;
+        ghLink.href = `${ghRoot}/blob/main/${file}`;
         contentContainer.classList.add('faded-in');
         contentContainer.classList.remove('faded-out');
         footer.classList.add('faded-in');
@@ -89,19 +94,21 @@ document.addEventListener("DOMContentLoaded", async function () {
         nextButton.classList.toggle('hidden', index === chapters.length - 1);
     }
 
-    function showToast() {
+    async function showToast() {
         toastNotification.classList.remove('hidden');
         toastNotification.classList.add('faded-in');
         toastNotification.classList.remove('faded-out');
         let toastCloser = document.getElementById('close-toast');
+        let toastLoader = toastNotification.getElementsByClassName('timing-bar')[0];
         toastCloser.addEventListener('click', () => {
             toastNotification.classList.remove('faded-in');
             toastNotification.classList.add('faded-out');
             setTimeout(() => toastNotification.classList.add('hidden'), 300);
         });
-        setTimeout(() => {
-            toastCloser.click();
-        }, 5000);
+        await wait(500);
+        toastLoader.classList.add('full');
+        await wait(5000);
+        toastCloser.click()
     }
 
     toggleIndex.addEventListener('click', async () => {

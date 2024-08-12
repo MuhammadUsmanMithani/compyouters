@@ -10,10 +10,14 @@
 }
 .md-loader a {
     color: var(--light-text-color);
-    text-decoration: underline var(--pink);
-    -webkit-text-decoration: underline var(--pink);
-    text-decoration-thickness: 2px;
+    -webkit-text-decoration-line: underline;
     -webkit-text-decoration-thickness: 2px;
+    -webkit-text-decoration-color: var(--pink);
+    -webkit-text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--pink);
+    text-decoration-style: solid;
     text-underline-offset: 3px;
     transition: all 0.25s ease-in-out, color 0.5s ease-in-out;
     position: relative;
@@ -48,10 +52,14 @@ p:has(>img) > img {
 }
 p:has(>img) a {
     color: gray !important;
-    text-decoration: underline gray !important;
-    -webkit-text-decoration: underline gray !important;
-    text-decoration-thickness: 1px !important;
+    -webkit-text-decoration-line: underline !important;
     -webkit-text-decoration-thickness: 1px !important;
+    -webkit-text-decoration-color: gray !important;
+    -webkit-text-decoration-style: solid !important;
+    text-decoration-line: underline !important;
+    text-decoration-thickness: 1px !important;
+    text-decoration-color: gray !important;
+    text-decoration-style: solid !important;
     font-weight: 500;
 }
 p:has(>img) a {
