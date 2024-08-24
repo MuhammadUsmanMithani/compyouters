@@ -9,8 +9,34 @@
     <link rel="stylesheet" href="css/renderer.css">
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Medium-Zoom CSS (optional) -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.min.css"> -->
+    
+    <!-- Medium-Zoom Script -->
+    <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.8/dist/medium-zoom.js"></script>
+
+    <style>
+        /* Ensure zoomed image is on top */
+        .medium-zoom-image {
+            z-index: 9999; /* Make sure this is higher than other content */
+        }
+
+        /* Optionally, add additional styles if needed */
+        .medium-zoom-overlay {
+            background-color: rgba(30, 30, 30, 0.96); /* Dark gray with some transparency */
+            z-index: 9998; /* Just below the zoomed image */
+        }
+        .medium-zoom-image {
+            max-width: 90vw; /* 90% of the viewport width */
+            max-height: 90vh; /* 90% of the viewport height */
+            object-fit: contain; /* Ensure image fits within the constraints */
+        }
+    </style>
+
 </head>
 <body>
+    <!-- Existing HTML Content -->
     <div id="loading-overlay" class="faded-in">
         <div class="spinner"></div>
     </div>
@@ -40,8 +66,8 @@
     <div class="container">
         <div class="content-container">
             <div id="chapter-details">
-            <span id="chapter-number">Chapter X</span>&nbsp;|&nbsp;
-            <span id="gh-link"><a>Edit on GitHub</a></span>
+                <span id="chapter-number">Chapter X</span>&nbsp;|&nbsp;
+                <span id="gh-link"><a>Edit on GitHub</a></span>
             </div>
             <h1 id="chapter-title">Loading...</h1>
             <md-block class="md-loader faded-out">
@@ -52,8 +78,6 @@
                 <button id="next-chapter" class="hidden">Next</button>
             </div>
         </div>
-        
-        
     </div>
     <footer class="footer faded-out">
         <div class="footer-text">
@@ -76,8 +100,26 @@
             <!-- <a href="https://discord.com/users/632157019960377349" title="Discord"><i class="fa-brands fa-discord fa-xl"></i></a> -->
         </div>
     </footer>
-    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+    <!-- Scripts -->
+    <script type="module" src="js/md-block.js"></script>
     <script src="/js/renderer.js" type="module"></script>
     <script src="/js/theme.js"></script>
+    
+    <!-- Initialize Medium-Zoom -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          // Delay initialization of medium-zoom
+          setTimeout(function() {
+            if (typeof mediumZoom === 'function') {
+              mediumZoom('md-block img',{
+              margin: 50,
+              background: (30, 30, 30)});
+            } else {
+              console.error('mediumZoom is not defined');
+            }
+          }, 1000); // Adjust the delay (in milliseconds) as needed
+        });
+      </script>
 </body>
 </html>
