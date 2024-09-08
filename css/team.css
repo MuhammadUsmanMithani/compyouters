@@ -201,9 +201,9 @@ hr {
 }
 
 .logo {
+    top: 60px;
     left: 50%;
     transform: translateX(-50%);
-    top: 60px;
     max-width: 80%;
 }
 

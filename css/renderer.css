@@ -344,8 +344,8 @@ p:has(note) {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        width: calc(100% - 59px);
         margin-left: 59px;
+        width: calc(100% - 59px);
     }
 
     .content-container {

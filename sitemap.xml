@@ -21,4 +21,8 @@
         <loc>https://compyouters.org/team</loc>
         <priority>0.50</priority>
     </url>
+    <url>
+        <loc>https://compyouters.org/donate</loc>
+        <priority>0.70</priority>
+    </url>
 </urlset>
