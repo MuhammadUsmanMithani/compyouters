@@ -1,0 +1,44 @@
+{
+    "members": [
+        {
+            "name": "Muhammad Usman Mithani",
+            "position": "Founder and Chief Executive Officer",
+            "img": "mithani.jpg",
+            "textDesc": "Friendly neighborhood programmer and hobbyist tech-nerd who has loved tinkering with tech for the majority of his life.",
+            "links": [
+                {
+                    "name": "linkedin",
+                    "url": "https://www.linkedin.com/in/iammithani/"
+                },
+                {
+                    "name": "github",
+                    "url": "https://github.com/MuhammadUsmanMithani/"
+                },
+                {
+                    "name": "link",
+                    "url": "https://iammithani.is-a.dev/"
+                },
+                {
+                    "name": "envelope",
+                    "url": "mailto:muhammadusmanmithani2@gmail.com"
+                }
+            ]
+        },
+        {
+            "name": "Keyaan Minhas",
+            "position": "Chief Technical Officer",
+            "img": "keyaan.jpg",
+            "textDesc": "I'm Keyaan, a Python and C++ coder with a passion for web automation. I specialize in developing efficient scripts and tools that solve complex problems. Whether it's automating tasks or building robust applications, I enjoy turning ideas into reality with passion and creativity.",
+            "links": [
+                {
+                    "name": "instagram",
+                    "url": "https://www.linkedin.com/in/keyaanminhas/"
+                },
+                {
+                    "name": "github",
+                    "url": "https://github.com/keyaanminhas/"
+                }
+            ]
+        }
+    ]
+}

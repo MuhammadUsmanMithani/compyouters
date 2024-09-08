@@ -1,0 +1,220 @@
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.container {
+    margin-top: 150px;
+}
+
+.team-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: calc(100% - 80px);
+    padding: 0 40px;
+    margin: 30px auto;
+}
+
+.team-member {
+    width: 100%;
+    max-width: 220px;
+    text-align: center;
+    font-family: "NK57 monospace SC";
+    line-height: 0px;
+    font-size: 12px;
+    text-wrap: wrap;
+    background-color: var(--light-banner-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 1rem -10px var(--light-text-color);
+    transition: all 0.25s ease-in-out;
+    text-align: center !important;
+    position: relative;
+    min-height: 400px;
+}
+
+.team-member:hover {
+    box-shadow: 0 2px 1rem -8px var(--light-text-color);
+    transform: scale(1.05);
+}
+
+.dark .team-member {
+    background-color: var(--dark-banner-color);
+    box-shadow: 0 2px 1rem -10px var(--dark-text-color);
+}
+
+.dark .team-member:hover {
+    box-shadow: 0 2px 1rem -8px var(--dark-text-color);
+}
+
+.member-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 15px auto;
+    margin-bottom: 20px;
+    display: block;
+    box-shadow: 0 2px 0.3rem -1px var(--light-text-color);
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.dark .member-img {
+    box-shadow: 0 2px 0.3rem -1px var(--dark-text-color);
+}
+
+.member-img:hover {
+    box-shadow: 0 2px 0.3rem var(--light-text-color);
+    border-radius: 10%;
+    transform: scale(1.05);
+}
+
+.dark .member-img:hover {
+    box-shadow: 0 2px 0.3rem -2px var(--dark-text-color);
+}
+
+.team-member p {
+    width: calc(100% - 40px);
+    position: relative;
+}
+
+.member-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 30px;
+    font-family: "NK57 Monospace";
+    line-height: 15px;
+    color: var(--light-text-color);
+    transition: all 0.2s ease-in-out;
+    text-align: center;
+    width: 100% !important;
+}
+
+.dark .member-name {
+    color: var(--dark-text-color);
+}
+
+a > .member-name {
+    color: var(--light-text-color);
+    -webkit-text-decoration-line: underline;
+    -webkit-text-decoration-thickness: 1px;
+    -webkit-text-decoration-color: var(--pink);
+    -webkit-text-decoration-style: solid;
+    text-decoration-line: underline;
+    text-decoration-thickness: 1px;
+    text-decoration-color: var(--pink);
+    text-decoration-style: solid;
+    text-underline-offset: 5px;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    top: 0;
+}
+
+a > .member-name:hover {
+    -webkit-text-decoration-thickness: 2px;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 8px;
+    top: -3px;
+}
+
+.dark a > .member-name {
+    color: var(--dark-text-color);
+}
+
+.text-description {
+    line-height: 15px;
+    font-size: 12px;
+    font-family: "Roboto";
+    font-weight: 500;
+    color: gray;
+    text-align: center;
+    padding: 0 20px;
+    margin-bottom: 70px;
+}
+
+.member-position {
+    line-height: 15px;
+    font-size: 12px;
+    position: absolute !important;
+    bottom: 40px;
+}
+
+.member-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: calc(100% - 40px);
+    position: absolute;
+    bottom: 20px;
+    font-size: 30px;
+}
+
+.member-links a {
+    margin: 0 10px;
+    color: var(--light-text-color);
+    transition: all 0.15s ease-in-out;
+    text-decoration: none;
+    font-family: "NK57 Monospace SC";
+    font-weight: 800;
+    text-align: center;
+    line-height: 30px;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    top: 0;
+    transform: scale(1);
+}
+
+.dark .member-links a {
+    color: var(--dark-text-color);
+}
+
+.member-links a:hover {
+    top: -3px;
+    transform: scale(1.2);
+}
+
+h1, h2 {
+    border-bottom: none !important;
+    line-height: 15px;
+    text-align: center;
+    font-weight: 800;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+hr {
+    height: 1px;
+    border-radius: 50%;
+    width: 100%;
+    text-align: center;
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.logo {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 60px;
+    max-width: 80%;
+}
+
+footer {
+    bottom: 0px !important;
+}
+
+@media screen and (max-width: 768px) {
+    .link-btn {
+        top: 15px;
+        left: 15px;
+        font-size: 18px;
+    }   
+}

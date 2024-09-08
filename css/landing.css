@@ -105,33 +105,12 @@ body {
     text-underline-offset: 8px;
     top: -3px;
 }
-a:has(>.open-viewer-btn) {
-    text-decoration: none !important;
-    display: contents;
-}
-a:has(>.open-viewer-btn):hover {
-    text-decoration: none !important;
-    top: -5px !important;
-}
-.open-viewer-btn {
-    background-color: var(--transparent);
-    color: var(--pink);
-    border: 2px solid var(--pink);
-    padding: 10px 20px;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    margin: 20px;
-    margin-bottom: 50px;
-    margin-left: 50%;
+.start-btn {
+    left: 50%;
     transform: translateX(-50%);
+    margin: 20px 0 50px 0;
 }
-.open-viewer-btn:hover {
-    background-color: var(--dark-pink);
-    color: var(--dark-text-color);
-}
+
 @media screen and (min-width:351px) and (max-width: 650px) {
     .text {
         padding: 30px 20px 25px 20px;

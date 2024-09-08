@@ -1,0 +1,15 @@
+/* Ensure zoomed image is on top */
+.medium-zoom-image {
+    z-index: 9999; /* Make sure this is higher than other content */
+}
+
+/* Optionally, add additional styles if needed */
+.medium-zoom-overlay {
+    background-color: rgba(30, 30, 30, 0.96); /* Dark gray with some transparency */
+    z-index: 9998; /* Just below the zoomed image */
+}
+.medium-zoom-image {
+    max-width: 90vw; /* 90% of the viewport width */
+    max-height: 90vh; /* 90% of the viewport height */
+    object-fit: contain; /* Ensure image fits within the constraints */
+}

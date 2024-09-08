@@ -1,7 +1,7 @@
 The reason you can read this text right now is because your phone or computer was able to load it... ***Load it***, you say? Where does it load to, you may ask?
 
 Well, as I talked about in Chapter 1, a computer consists of two types of memories.
-> <note>**Random Access Memory (RAM):** Very fast volatile memory that stores instructions and data that can directly be accessed by the CPU. It can be read and written to simultaneously.\n**Read-Only Memory (ROM):** Non-volatile flash memory that can traditionally only be read from. It stores the startup instructions for the device.</note>
+> <note>**Random Access Memory (RAM):** Very fast volatile memory that stores instructions and data that can directly be accessed by the CPU. It can be read and written to simultaneously.<br>**Read-Only Memory (ROM):** Non-volatile flash memory that can traditionally only be read from. It stores the startup instructions for the device.</note>
 
 The RAM stores the data and instructions of the program that are being executed at any point in time. Everything is loaded up into the RAM from the hard disk before it can be executed according to the stored-program concept.
 

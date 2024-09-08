@@ -1,20 +1,26 @@
-# A Computer for You
----
-This is an indevelopment website made for teaching people about the interesting parts of tech and computers. The inspiration for this site was [**CPU.land**](https://cpu.land/). If you are seeing this currently, you have probably been invited by Muhammad Usman Mithani (a.k.a. iammithani) to view the code for this repository, or you have somehow gained access to older builds and older code of this site.
+# Compyouters.ORG
+## Hello There 👋
+Welcome to Compyouters.ORG - An open-source project made by a [team of high school students](https://compyouters.org/team). It has been a passion project of mine, the CEO, for over a year. I have always been fascinated by computers and how they work. I have always wanted to learn more about them, but I found that most of the resources available online were either too technical or too boring. That's why I decided to create this project - to make learning about computers fun and easy for everyone.
 
----
-## Running the website
-This build may partially work loading it as a static HTML file as the markdown support for it is pretty broken and thus it does not load the markdown anyways due to CORS issues. That is why it is highly preferable that you launch the site on a web server (either by making an express.js/flask or any other backend for a server where you host all the files or preferably using the other method shown).
+The best part is, this is an open-source project, which means anyone who has more knowledge about computer hardware and computer science can contribute to this project and make it better with simple markdown! You can find the source code of this project on [GitHub](https://compyouters.org/github).
 
-**NOTE: The following builds will completely break without using a web server to host the website even on your local device for debugging.**
+One of my aims of this project was to make it as accessible as possible. That's why We have made sure that this project is mobile-friendly, lightweight, and can be accessed by anyone with just an internet connection. We have also made sure that the content is easy to understand and is not too technical. If you have any questions or suggestions, feel free to create an issue or pull request on [the Github repository](https://compyouters.org/github).
 
-Steps to launch the files on a web server
-- Clone the repository using `git clone` in cmd to any preferable folder.
-- Open the repository in Visual Studio Code.
-- Open the extensions tab from the left pane and search for "Live Preview" (by Microsoft) or "Live Server" (third-party). I am going to give the steps for using Live Preview.
-- Go to `{root}/index.html` and right click, and then select "Show Preview"
-- A pane on the side to preview the website linked to `localhost` port `3000`, and will automatically update on any state change
-- If you want to view the website in a browser, click on the hamburger menu on the top right and click on "Open in Browser". Closing the pane should not shut down the server (I think so as it did not close for me but maybe thats due to some other settings).
-- If you do stick with the pane on the side of your VSCode screen, you can click on the hamburger menu on the top right of the pane and select "Open DevTools Pane" to open DevTools for the preview in VSCode
+We will be trying to release one chapter every two weeks, so stay tuned for more.
 
-### Please give your honest feedback about the website and the code. I am open to any suggestions and improvements. Thank you for reading this far! If you want to contact me, you probably already have a method to contact me and thus contact me on those respective platforms.
+## Inspirations
+- [CPU.land](https://cpu.land/)
+- [Techquickie](https://www.youtube.com/@techquickie)
+- [Sir Zain Merchant](https://www.instagram.com/cswithzain/)
+
+## Contributing
+To contribute, you will need to have git installed on your computer. You can install it by following [this guide](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git). You will also need to be experienced with git to be able to contribute. Once you have git installed, you can follow these steps to contribute to the project:
+
+1. Fork the repository by clicking on the 'Fork' button on the top right corner of the repository page.
+2. Clone your fork of the repository to your local machine by running `git clone <LINK_TO_YOUR_FORK>.git`
+3. Perform the changes you want to make on your local machine and push them to your fork.
+4. Create a pull request by clicking on the 'New Pull Request' button on the original repository page and select your fork, detailing the changes you have made.
+
+If you like this project and would want us to expand it further, please [consider donating](https://compyouters.org/donate). It would help me a lot in being able to sustain the project for longer and investing in it to make it better!
+
+We hope you enjoy reading this as much as we enjoyed making it!

@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Chapters - Compyouters</title>
+    <title>View Chapters - Compyouters.ORG</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link rel="stylesheet" href="css/md.css">
     <link rel="stylesheet" href="css/renderer.css">
     <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/zoom.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
@@ -33,15 +34,14 @@
                     <span class="slider"></span>
                 </label>
             </span>
-            <!-- theme switcher comes here -->
         </div>
     </div>
     <div id="backdrop" class="hidden faded-out"></div>
     <div class="container">
         <div class="content-container">
             <div id="chapter-details">
-            <span id="chapter-number">Chapter X</span>&nbsp;|&nbsp;
-            <span id="gh-link"><a>Edit on GitHub</a></span>
+                <span id="chapter-number">Chapter X</span>&nbsp;|&nbsp;
+                <span id="gh-link"><a>Edit on GitHub</a></span>
             </div>
             <h1 id="chapter-title">Loading...</h1>
             <md-block class="md-loader faded-out">
@@ -52,31 +52,29 @@
                 <button id="next-chapter" class="hidden">Next</button>
             </div>
         </div>
-        
-        
     </div>
     <footer class="footer faded-out">
-        <div class="footer-text">
-            <p>
-                <span class="footer-text-span">Donate at</span>
-                <a href="https://buymeacoffee.com/iammithani"><span class="footer-text-span">Buy Me A Coffee</span></a>
-            </p>
-            <p>
-                <span class="footer-text-span">Made with ❤️ by</span>
-                <a href="https://iammithani.is-a.dev/"><span class="footer-text-span">Muhammad Usman Mithani</span></a>
-            </p>
-            <p>
-                <a href="../index.html"><span class="footer-text-span">Back to Home</span></a>
-            </p>
-        </div>
-        <div class="footer-links">
-            <a href="https://github.com/MuhammadUsmanMithani" title="GitHub"><i class="fa-brands fa-github fa-xl"></i></a>
-            <a href="https://linkedin.com/in/iammithani" title="LinkedIn"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-            <a href="mailto:muhammadusmanmithani2@gmail.com" title="Email"><i class="fa-solid fa-envelope fa-xl"></i></a>
-            <!-- <a href="https://discord.com/users/632157019960377349" title="Discord"><i class="fa-brands fa-discord fa-xl"></i></a> -->
-        </div>
+        <div class="footer">
+            <div class="footer-text">
+                <p>
+                    <a href="./index.html"><span class="footer-text-span">Back to Home</span></a>
+                </p>
+                <p>
+                    <span class="footer-text-span">Want to donate? </span>
+                    <a href="./donate.html"><span class="footer-text-span">Contact Us</span></a>
+                </p>
+                <p>
+                    <span class="footer-text-span">Made with ❤️ by</span>
+                    <a href="./team.html"><span class="footer-text-span">Our Team</span></a>
+                </p>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/MuhammadUsmanMithani/compyouters" title="GitHub"><i class="fa-brands fa-github fa-xl"></i></a>
+                <a href="mailto:muhammadusmanmithani2@gmail.com" title="Email"><i class="fa-solid fa-envelope fa-xl"></i></a>
+            </div>
     </footer>
     <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <script src="/js/zoom.js" type="module"></script>
     <script src="/js/renderer.js" type="module"></script>
     <script src="/js/theme.js"></script>
 </body>
