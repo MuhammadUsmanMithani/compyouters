@@ -64,7 +64,9 @@ In the above example, imagine you are scrolling your webpage. Your network adapt
 ![Concept of a stack (Source: tutorialspoint)](../assets/images/content/stack_data_type.jpg)
 *Concept of a stack (Source: [tutorialspoint](https://www.tutorialspoint.com/data_structures_algorithms/stack_algorithm.htm))*
 
-While this is not running multiple tasks concurrently, all of it happens so fast that to the average end user, it feels completely normal and smooth to perform both such tasks over the same thread. However, this cannot happen to a larger scale since handling too many interrupts can cause all the tasks on a device to run very slow, which is why multiple threads are still needed in a device
+While this is not running multiple tasks concurrently, all of it happens so fast that to the average end user, it feels completely normal and smooth to perform both such tasks over the same thread. However, this cannot happen to a larger scale since handling too many interrupts can cause all the tasks on a device to run very slow, which is why multiple threads are still needed in a device.
+
+> <note>In Chapter 1, we talked about the von Neumann architecture and about the stored program concept being used in computers today. Currently, the von Neumann architecture is not the base architecture for CPUs, due to the addition of multi-core processing but the concept of having a stored-program computer with unified memory for instructions and data is the same. This is because the von Neumann architecture was based on [single instruction, single data (SISD)](https://en.wikipedia.org/wiki/Single_instruction,_single_data) architecture whereas the current computers are based on [multiple instruction, multiple data (MIMD)](https://en.wikipedia.org/wiki/Multiple_instruction,_multiple_data) architecture.</note>
 
 ## Architecture
 You probably have heard the news about x86 and ARM, and how Apple's revolutionary new M series chips have excellent battery life like no other, etc. Most people do not know what they mean.
