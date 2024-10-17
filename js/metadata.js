@@ -37,8 +37,8 @@ function setMetaTags({ title, description, icon, link }) {
 
 // Example usage:
 document.addEventListener('DOMContentLoaded', () => {
-    const title = document.querySelector('meta[name="og:title"]')?.content || 'Default Title';
-    const description = document.querySelector('meta[name="og:description"]')?.content || 'Default Description';
+    const title = document.querySelector("title")?.innerText || 'Default Title';
+    const description = document.querySelector('meta[name="description"]')?.content || 'Default Description';
     const icon = document.querySelector('link[rel="icon"]')?.href || 'favicon.png';
     const link = window.location.href;
 
