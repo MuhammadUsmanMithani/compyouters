@@ -86,7 +86,11 @@ document.addEventListener("DOMContentLoaded", async function () {
             listItems[i].classList.remove('active');
         }
         listItems[index].classList.add('active');
-
+        await wait(1000)
+        mediumZoom('md-block img',{
+            margin: 30,
+            background: (30, 30, 30)
+        });
     }
 
     function updateNavButtons(index) {

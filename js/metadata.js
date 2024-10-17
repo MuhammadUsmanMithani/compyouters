@@ -23,14 +23,14 @@ function setMetaTags({ title, description, icon, link }) {
         linkElement.href = icon;
         document.head.appendChild(linkElement);
         addMetaTag('og:image', icon)
+        addMetaTag("og:thumbnail", icon);
+        addMetaTag("twitter:image", icon);
     }
     if (link) {
         const linkElement = document.createElement('link');
         linkElement.rel = 'canonical';
         linkElement.href = link;
         document.head.appendChild(linkElement);
-
-        // Add clickable link for embed
         addMetaTag('og:url', link);
         addMetaTag('twitter:url', link);
     }
