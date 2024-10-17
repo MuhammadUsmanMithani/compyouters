@@ -31,7 +31,7 @@
     padding: 20px;
     margin: 20px;
     box-shadow: 0 2px 1rem -10px var(--light-text-color);
-    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease;
     text-align: center !important;
     position: relative;
     min-height: 400px;
@@ -59,7 +59,7 @@
     margin-bottom: 20px;
     display: block;
     box-shadow: 0 2px 0.3rem -1px var(--light-text-color);
-    transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease;
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 }
@@ -90,7 +90,7 @@
     font-family: "NK57 Monospace";
     line-height: 15px;
     color: var(--light-text-color);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
     text-align: center;
     width: 100% !important;
 }
@@ -110,7 +110,7 @@ a > .member-name {
     text-decoration-color: var(--pink);
     text-decoration-style: solid;
     text-underline-offset: 5px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
     position: relative;
     top: 0;
 }
@@ -157,7 +157,7 @@ a > .member-name:hover {
 .member-links a {
     margin: 0 10px;
     color: var(--light-text-color);
-    transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease;
     text-decoration: none;
     font-family: "NK57 Monospace SC";
     font-weight: 800;

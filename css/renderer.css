@@ -18,7 +18,7 @@ body {
     padding: 10px 15px;
     border-radius: 10px;
     z-index: 1000;
-    transition: opacity 0.3s ease-in-out 0.1s, right 0.6s ease-in-out;
+    transition: opacity 0.3s ease 0.1s, right 0.6s ease;
     background-color: var(--dark-bg-color);
     justify-content: center;
     overflow: hidden;
@@ -31,7 +31,7 @@ body {
     height: 20px;
     width: 20px;
     padding: 3px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
     border-radius: 50%;
     margin: 0;
 }
@@ -96,7 +96,7 @@ body {
 .md-loader {
     font-size: 1.1rem;
     width: 100%;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease;
     text-wrap: calc();
 }
 
@@ -106,7 +106,7 @@ body {
     align-items: center;
     margin: 30px 0 0 0;
     color: var(--pink) !important;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
     font-size: 15px;
 }
 
@@ -115,7 +115,7 @@ body {
     -webkit-text-decoration-color: transparent;
     text-decoration-color: transparent;
     text-underline-offset: 3px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
 }
 
 #chapter-details a:hover {
@@ -167,7 +167,7 @@ body {
 }
 
 #index-title, #index-list {
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
     font-family: "NK57 Monospace SC";
 }
 
@@ -182,7 +182,7 @@ body {
     padding: 10px;
     margin: 5px 0px;
     border-radius: 10px;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease;
     cursor: pointer;
     background-color: var(--light-banner-color);
     width: -moz-fit-content;
@@ -247,7 +247,7 @@ body {
     font-size: 32px;
     color: inherit;
     background-color: transparent;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease;
 }
 #toggle-index:hover {
     background-color: var(--light-bg-color);
@@ -282,7 +282,7 @@ body {
     border: 2px solid var(--pink);
     font-size: 20px;
     border-radius: 10px;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease;
     font-family: "NK57 Monospace SC";
 }
 .nav-buttons button:hover {
@@ -294,50 +294,13 @@ body {
     width: 220px;
     bottom: 20px !important;
     position: absolute;
-    transition: opacity 0.2s ease-in-out 0.1s;
+    transition: opacity 0.2s ease 0.1s;
 }
 .switch {
     margin-left: 20px;
     position: inherit !important;
     padding: 0;
     scale: 0.9;
-}
-
-
-/* Blockquote CSS */
-p:has(tip, dyk, note)::before {
-    white-space: pre;
-    font-weight: 900;
-    font-family: "NK57 Monospace SC";
-}
-p:has(tip)::before {
-    content: "💡 TIP!\A";
-    color: var(--tip-border);
-}
-p:has(dyk)::before {
-    content: "🧠 DID YOU KNOW?\A";
-    color: var(--dyk-border);
-}
-p:has(note)::before {
-    content: "✏️ NOTE:\A";
-    color: var(--note-border);
-}
-p:has(tip, dyk, note) {
-    border-left: 5px solid;
-    border-radius: 5px;
-    padding: 10px;
-}
-p:has(tip) {
-    background-color: var(--tip-bg);
-    border-color: var(--tip-border);
-}
-p:has(dyk) {
-    background-color: var(--dyk-bg);
-    border-color: var(--dyk-border);
-}
-p:has(note) {
-    background-color: var(--note-bg);
-    border-color: var(--note-border);
 }
 
 
@@ -359,7 +322,7 @@ p:has(note) {
         width: 100%;
         height: 100vh;
         z-index: 500;
-        transition: width 0.3s ease-in-out;
+        transition: width 0.3s ease;
     }
 
     #index-header {
@@ -393,9 +356,5 @@ p:has(note) {
 
     .switch {
         transform: scale(1.2) !important;
-    }
-
-    blockquote {
-        margin: 10px;
     }
 }

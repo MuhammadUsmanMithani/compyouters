@@ -5,7 +5,7 @@
     line-height: 1.7;
     font-size: 1.1rem;
     width: 80%;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease;
     margin: 0 auto;
 }
 .md-loader a {
@@ -19,7 +19,7 @@
     text-decoration-color: var(--pink);
     text-decoration-style: solid;
     text-underline-offset: 3px;
-    transition: all 0.25s ease-in-out, color 0.5s ease-in-out;
+    transition: all 0.25s ease-out, color 0.5s ease;
     position: relative;
     top: 0;
     font-weight: 600;
@@ -69,7 +69,7 @@ p:has(>img) a {
     padding: 3px;
     background-color: var(--light-banner-color);
     border-radius: 3px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease;
     color: var(--light-text-color);
     font-size: 0.95rem;
 }
@@ -110,9 +110,48 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 5px;
 }
 
+/* Blockquote CSS */
+p:has(tip, dyk, note) {
+    border-left: 5px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+p:has(tip, dyk, note)::before {
+    white-space: pre;
+    font-weight: 900;
+    font-family: "NK57 Monospace SC";
+}
+p:has(tip)::before {
+    content: "💡 TIP!\A";
+    color: var(--tip-border);
+}
+p:has(dyk)::before {
+    content: "🧠 DID YOU KNOW?\A";
+    color: var(--dyk-border);
+}
+p:has(note)::before {
+    content: "✏️ NOTE:\A";
+    color: var(--note-border);
+}
+p:has(tip) {
+    background-color: var(--tip-bg);
+    border-color: var(--tip-border);
+}
+p:has(dyk) {
+    background-color: var(--dyk-bg);
+    border-color: var(--dyk-border);
+}
+p:has(note) {
+    background-color: var(--note-bg);
+    border-color: var(--note-border);
+}
+
 @media screen and (max-width: 850px) {
     .md-loader{
         font-size: 1.2rem;
+    }
+    blockquote {
+        margin: 10px;
     }
 }
 @media screen and (min-width: 2500px) {
