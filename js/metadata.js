@@ -22,6 +22,7 @@ function setMetaTags({ title, description, icon, link }) {
         linkElement.type = 'image/png';
         linkElement.href = icon;
         document.head.appendChild(linkElement);
+        addMetaTag('og:image', icon)
     }
     if (link) {
         const linkElement = document.createElement('link');
